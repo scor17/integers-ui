@@ -48,7 +48,7 @@ const Authenticate = ({ title, onSubmit, isPending, children, hasError }) => {
         </FormControl>
         <FormControl className={classes.control} error={!isPasswordValid}>
           <InputLabel htmlFor='password-input'>Password</InputLabel>
-          <Input id='password-input' aria-describedby='password-validation' onChange={(e) => setPassword(e.target.value)} />
+          <Input id='password-input' type='password' aria-describedby='password-validation' onChange={(e) => setPassword(e.target.value)} />
           {!isPasswordValid && <FormHelperText id='password-validation'>Password must be at least 3 characters.</FormHelperText>}
         </FormControl>
         <Button className={classes.button} type='submit' disabled={isPending}>Submit</Button>
