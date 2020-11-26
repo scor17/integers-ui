@@ -11,8 +11,13 @@ export const signUp = async (email, password) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      email,
-      password
+      data: {
+        type: 'accounts',
+        attributes: {
+          email,
+          password
+        }
+      }
     })
   });
 
@@ -31,8 +36,13 @@ export const signIn = async (email, password) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      email,
-      password
+      data: {
+        type: 'auth',
+        attributes: {
+          email,
+          password
+        }
+      }
     })
   });
 
@@ -47,7 +57,7 @@ export const signIn = async (email, password) => {
 };
 
 export const getInt = async () => {
-  const res = await fetch(`${getBasePath()}/current`, {
+  const res = await fetch(`${getBasePath()}/integers/current`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -65,7 +75,7 @@ export const getInt = async () => {
 };
 
 export const nextInt = async () => {
-  const res = await fetch(`${getBasePath()}/next`, {
+  const res = await fetch(`${getBasePath()}/integers/next`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -83,14 +93,19 @@ export const nextInt = async () => {
 };
 
 export const setInt = async (newValue) => {
-  const res = await fetch(`${getBasePath()}/current`, {
+  const res = await fetch(`${getBasePath()}/integers/current`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${AuthCookie.get()}`
     },
     body: JSON.stringify({
-      current: newValue
+      data: {
+        type: 'integers',
+        attributes: {
+          current: newValue
+        }
+      }
     })
   });
 
