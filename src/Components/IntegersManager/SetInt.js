@@ -12,8 +12,13 @@ const SetInt = () => {
   const setCurrentInt = useCallback(async () => {
     dispatch({ type: 'UPDATE_REQUEST' });
     try {
-      const res = await setInt(parseInt(newValue, 10));
-      dispatch({ type: 'UPDATE_SUCCESS', value: res.current });
+      const parsed = parseInt(newValue, 10);
+      if (!parsed) {
+        dispatch({ type: 'UPDATE_FAIL' });
+        return;
+      }
+      const res = await setInt(parsed);
+      dispatch({ type: 'UPDATE_SUCCESS', value: res.data.attributes.current });
     } catch (err) {
       dispatch({ type: 'UPDATE_FAIL' });
     }

@@ -19,9 +19,9 @@ export const signUp = async (email, password) => {
   if (res.status !== 201) {
     throw new Error();
   }
-  const data = await res.json();
-  AuthCookie.set(data.token);
-  return data;
+  const json = await res.json();
+  AuthCookie.set(json.data.attributes.token);
+  return json;
 };
 
 export const signIn = async (email, password) => {
@@ -41,9 +41,9 @@ export const signIn = async (email, password) => {
     error.status = res.status;
     throw error;
   }
-  const data = await res.json();
-  AuthCookie.set(data.token);
-  return data;
+  const json = await res.json();
+  AuthCookie.set(json.data.attributes.token);
+  return json;
 };
 
 export const getInt = async () => {

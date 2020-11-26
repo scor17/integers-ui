@@ -12,7 +12,7 @@ const CurrentInt = () => {
     dispatch({ type: 'CURRENT_REQUEST' });
     try {
       const res = await getInt();
-      dispatch({ type: 'CURRENT_SUCCESS', value: res.current });
+      dispatch({ type: 'CURRENT_SUCCESS', value: res.data.attributes.current });
     } catch (err) {
       dispatch({ type: 'CURRENT_FAIL' });
     }

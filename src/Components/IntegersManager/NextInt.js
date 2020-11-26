@@ -12,7 +12,7 @@ const NextInt = () => {
     dispatch({ type: 'NEXT_REQUEST' });
     try {
       const res = await nextInt();
-      dispatch({ type: 'NEXT_SUCCESS', value: res.current });
+      dispatch({ type: 'NEXT_SUCCESS', value: res.data.attributes.current });
     } catch (err) {
       dispatch({ type: 'NEXT_FAIL' });
     }
