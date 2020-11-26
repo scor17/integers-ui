@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/integers-ui/static/css/main.406a1b12.chunk.css",
+    "main.js": "/integers-ui/static/js/main.6bf7ff0f.chunk.js",
+    "main.js.map": "/integers-ui/static/js/main.6bf7ff0f.chunk.js.map",
+    "runtime-main.js": "/integers-ui/static/js/runtime-main.f7148970.js",
+    "runtime-main.js.map": "/integers-ui/static/js/runtime-main.f7148970.js.map",
+    "static/js/2.d7c16bc1.chunk.js": "/integers-ui/static/js/2.d7c16bc1.chunk.js",
+    "static/js/2.d7c16bc1.chunk.js.map": "/integers-ui/static/js/2.d7c16bc1.chunk.js.map",
+    "index.html": "/integers-ui/index.html",
+    "static/css/main.406a1b12.chunk.css.map": "/integers-ui/static/css/main.406a1b12.chunk.css.map",
+    "static/js/2.d7c16bc1.chunk.js.LICENSE.txt": "/integers-ui/static/js/2.d7c16bc1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f7148970.js",
+    "static/js/2.d7c16bc1.chunk.js",
+    "static/css/main.406a1b12.chunk.css",
+    "static/js/main.6bf7ff0f.chunk.js"
+  ]
+}
