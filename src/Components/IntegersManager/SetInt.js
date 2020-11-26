@@ -21,7 +21,7 @@ const SetInt = () => {
 
   return (
     <div className={classes.currentBlock}>
-      <Button onClick={setCurrentInt}>Set Current</Button>
+      <Button className={classes.button} onClick={setCurrentInt}>Set Current</Button>
       <Input type='number' onChange={(e) => { setNewValue(e.target.value); }} />
     </div>
   );
@@ -32,5 +32,13 @@ export default SetInt;
 const useStyles = makeStyles({
   currentBlock: {
     display: 'flex'
+  },
+  button: {
+    backgroundColor: '#3b5998',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: '#3b5998'
+    },
+    marginRight: 15
   }
 });
