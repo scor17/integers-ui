@@ -13,7 +13,7 @@ const SetInt = () => {
     dispatch({ type: 'UPDATE_REQUEST' });
     try {
       const parsed = parseInt(newValue, 10);
-      if (!parsed) {
+      if (!parsed == null) {
         dispatch({ type: 'UPDATE_FAIL' });
         return;
       }
